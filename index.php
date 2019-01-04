@@ -8,12 +8,9 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-$numbers = array(7, 9, 8, 9, 8, 8, 6);
+include "functions.php";
 
-function printArray($array)
-{
-    echo implode($array, ", ");
-}
+$numbers = array(7, 9, 8, 9, 8, 8, 6);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,8 +18,12 @@ function printArray($array)
     <meta charset="UTF-8">
     <title>Pair Program</title>
 </head>
+<h1>Pair Program 1</h1>
 <body>
-    <h1>Pair Program 1</h1>
-    <?php printArray($numbers);?>
+    <?php
+        printArray($numbers);
+        echo "<br>";
+        echo largest($numbers);
+    ?>
 </body>
 </html>

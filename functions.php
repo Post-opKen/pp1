@@ -21,3 +21,14 @@ function largest($array)
     rsort($array);
     return $array[0];
 }
+
+//returns the average value in an array
+function average($array)
+{
+    $total = 0;
+    foreach ($array as $item)
+    {
+        $total += $item;
+    }
+    return $total/count($array);
+}

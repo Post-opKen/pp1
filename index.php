@@ -22,10 +22,9 @@ $numbers = array(7, 9, 8, 9, 8, 8, 6);
 <body>
     <?php
         printArray($numbers);
-        echo "<br>";
-        echo largest($numbers);
-        echo "<br>";
-        echo average($numbers);
+        echo '<p>' . largest($numbers) . '</p>';
+        echo '<p>' . average($numbers) . '</p>';
+        printArray(removeDups($numbers));
     ?>
 </body>
 </html>

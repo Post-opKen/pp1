@@ -11,7 +11,7 @@ error_reporting(E_ALL);
 //prints an array as a comma separated list
 function printArray($array)
 {
-    echo implode($array, ", ");
+    echo '<p>' . implode($array, ", ") . '</p>';
 }
 
 //returns the largest numeric value in an array
@@ -31,4 +31,15 @@ function average($array)
         $total += $item;
     }
     return $total/count($array);
+}
+
+//returns an array with duplicates removed
+function removeDups($array)
+{
+    $noDups = array();
+    foreach (array_count_values($array) as $key => $val)
+    {
+        array_push($noDups, $key);
+    }
+    return $noDups;
 }

@@ -43,3 +43,24 @@ function removeDups($array)
     }
     return $noDups;
 }
+
+//returns an associative array with the original array's values and the number of times they occur
+function distribution($array)
+{
+    $noDups = removeDups($array);
+    sort($noDups);
+    $distArray = array();
+    foreach ($noDups as $noDupVal)
+    {
+        $dupCount = 0;
+        foreach ($array as $arrayVal)
+        {
+            if($arrayVal == $noDupVal)
+            {
+                $dupCount ++;
+            }
+        }
+        $distArray[$noDupVal] = $dupCount;
+    }
+    return $distArray;
+}

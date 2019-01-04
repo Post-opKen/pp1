@@ -25,6 +25,7 @@ $numbers = array(7, 9, 8, 9, 8, 8, 6);
         echo '<p>' . largest($numbers) . '</p>';
         echo '<p>' . average($numbers) . '</p>';
         printArray(removeDups($numbers));
+        print_r(distribution($numbers));
     ?>
 </body>
 </html>
